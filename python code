@@ -1,0 +1,25 @@
+import random
+
+def generate_story():
+    print("Welcome to the Text-Based Story Generator!")
+    
+    # Get user input for story elements
+    character = input("Enter a character's name: ")
+    setting = input("Enter a setting: ")
+    action = input("Enter an action: ")
+    climax = input("Enter a climactic event: ")
+
+    # Generate a random resolution
+    resolutions = ["Happy ending", "Sad ending", "Twist ending"]
+    resolution = random.choice(resolutions)
+
+    # Construct the story
+    story = f"\nOnce upon a time, in the land of {setting}, there was a character named {character}."
+    story += f"\nOne day, {character} decided to {action}."
+    story += f"\nBut little did {character} know, a {climax} occurred, leading to a {resolution.lower()}."
+
+    # Print the generated story
+    print(story)
+
+# Run the story generator
+generate_story()
